@@ -15,48 +15,48 @@
 </head>
 
 <body class="flex flex-col justify-center h-screen sm:items-center">
-  <main class="bg-neutral-50 m-5 py-9 px-6 sm:max-w-2xl">
+  <main class="bg-neutral-50 m-5 py-9 px-6 sm:max-w-lg">
 
 
-    <section class="date-picker ">
-      <form class="flex flex-row justify-evenly">
-        <div class="flex flex-col">
+    <section class="date-picker">
+      <form class="flex flex-row justify-evenly sm:justify-start sm:gap-5">
+        <div class="flex flex-col ">
           <label for="days" class="mb-1  uppercase tracking-widest text-xs text-neutral-500 font-bold">
             Day</label>
-          <input type="number" id="days" name="days" placeholder="--"
-            class=" border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16" />
+          <input type="number" id="days" name="days" placeholder="DD"
+            class=" border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16 sm:w-24" />
         </div>
         <div class="flex flex-col">
           <label for="months" class="mb-1 uppercase tracking-widest text-xs text-neutral-500 font-bold">
             Month</label>
-          <input type="number" id="months" name="months" placeholder="--"
-            class="border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16" />
+          <input type="number" id="months" name="months" placeholder="MM"
+            class="border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16 sm:w-24" />
         </div>
         <div class="flex flex-col">
           <label for="years" class="mb-1  uppercase tracking-widest text-xs text-neutral-500 font-bold">
             Year</label>
-          <input type="number" id="years" name="years" placeholder="----"
-            class="border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16" />
+          <input type="number" id="years" name="years" placeholder="YYYY"
+            class="border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16 sm:w-24" />
         </div>
       </form>
     </section>
 
-    <section class="icon my-8">
-      <div class="relative flex items-center"> <!-- Add 'flex items-center' to align the icon vertically -->
-        <img src="./assets/images/icon-arrow.svg" alt="purple arrow down icon" class="m-auto w-10 bg-violet-500 rounded-full p-3 z-10">
+    <section class="icon my-8 sm:my-2">
+      <div class="relative flex items-center ">
+        <img src="./assets/images/icon-arrow.svg" alt="purple arrow down icon" class="m-auto w-10 bg-violet-500 rounded-full p-3 z-10 sm:mr-0">
         <div class="absolute w-full h-px bg-neutral-300 top-1/2 left-0 transform -translate-y-1/2 z-0"></div>
       </div>
     </section>
 
     <section class="date-display">
       <p class="italic font-extrabold text-5xl tracking-wide"> <span
-          class="year italic text-violet-500 font-extrabold text-5xl tracking-wide">x</span>
+          class="year italic text-violet-500 font-extrabold text-5xl tracking-wide">--</span>
         years</p>
-      <p class="py-1 italic font-extrabold text-5xl tracking-wide"> <span
-          class="month italic text-violet-500 font-extrabold text-5xl tracking-wide">x</span>
+      <p class="py-1 italic font-extrabold text-5xl tracking-wide"><span
+          class="month italic text-violet-500 font-extrabold text-5xl tracking-wide">--</span>
         months</p>
       <p class="italic font-extrabold text-5xl tracking-wide"> <span
-          class="day italic text-violet-500 font-extrabold text-5xl tracking-wide">x</span>
+          class="day italic text-violet-500 font-extrabold text-5xl tracking-wide">--</span>
         days</p>
     </section>
 
