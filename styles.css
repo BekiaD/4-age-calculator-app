@@ -92,7 +92,6 @@ main{
 }
 
 .dmy > p{
-    margin:;
     font-size: 1rem;
     font-weight: 700;
     color: var(--color-neutral-smokey-grey);
@@ -106,8 +105,8 @@ main{
 }
 
 input{
-    height:3rem;
-    width: 6rem;
+    /* height:3rem;
+    width: 6rem; */
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 700;
@@ -124,8 +123,8 @@ input{
 
 
 .icon{
-    width: 60px;
-    height:60px;
+    /* width: 60px;
+    /* height:60px;  precentage!! */
     background-color: var(--color-primary-purple);
     border-radius: 50%;
     display:flex;
