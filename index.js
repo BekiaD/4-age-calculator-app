@@ -14,14 +14,14 @@ const todaysDateObj = new Date()
 const month         = todaysDateObj.getUTCMonth() + 1
 const day           = todaysDateObj.getUTCDate()
 const year          = todaysDateObj.getUTCFullYear()
-const todaysDateRaw =`${year}/${month}/${day}`
+const todaysDateRaw =`${year}-${month}-${day}`
 
 // console.log(todaysDateObj)
 // console.log(todaysDateRaw)
 
 const pMonth        = month.toString().padStart(2,"0");
 const pDay          = day.toString().padStart(2,"0");
-const todaysDatePad = `${year}/${pMonth}/${pDay}`;
+const todaysDatePad = `${year}-${pMonth}-${pDay}`;
 // console.log(todaysDatePad)
 
 
@@ -31,42 +31,56 @@ button.addEventListener('click', function(e){
     e.preventDefault()
 
 // birthdate 
-    const birthDateObj  = new Date()
     const birthMonth    = monthInput.value
     const birthDay      = dayInput.value
     const birthYear     = yearInput.value
-    const birthDateRaw  =`${birthYear}/${birthMonth}/${birthDay}`
+    const birthDateRaw  =`${birthYear}-${birthMonth}-${birthDay}`
 
     // console.log(birthDateObj, 'hi')
     // console.log(birthDateRaw)
+    
     const pBYear        = birthYear.toString()
     const pBMonth       = birthMonth.toString().padStart(2,"0")
     const pBDay         = birthDay.toString().padStart(2,"0")
-    const birthDatePad  = `${pBYear}/${pBMonth}/${pBDay}`
+    const birthDatePad  = `${pBYear}-${pBMonth}-${pBDay}`
     // console.log(birthDatePad)
 
+    const isValidDate = checkValidDate(birthDay, birthMonth) 
+    // if (isValidDate){
+    //     console.log('trutru')
+    // } else {
+    //     console.log('please good')
+    // }
+
+    if(!isValidDate){
+        alert('Please add your birthdate')
+        return
+    } 
+    console.log('trutru')
+
+    console.log('useful message')
     // function to calculate age
 
-    calculateAge()
-   
+    const birthdayInDays = 
 
-    function calculateAge(){
-        const ageYear   = year  - pBYear
-        const ageMonth  = month - pBMonth
-        const ageDay    = day   - pBDay
-
-        console.log(`${ageYear}/${ageMonth}/${ageDay}`)//ugh that does not work with months smaller than birthmonth
-    }
-    // // checking if date is valid
-    // function isDateValid(dateStr) {
-    //     return !isNaN(new Date(birthDatePad))
-    // } 
-    // console.log(isDateValid('2022/12/30'))
+    // 
 })
 
 
-// function calculateAge(today, bday){
 
-//     console.log(today - bday)
-// }
-
+  // check if birth date exists - number of days/months
+  function checkValidDate(day, month){
+    // console.log(day, month)
+    if (
+        day > 31 ||
+        month > 12 ||
+        (month == 2 && day > 29) ||
+        (month == 4 && day > 30) ||
+        (month == 6 && day > 30) ||
+        (month == 9 && day > 30) ||
+        (month == 11 && day > 30)
+    ) {
+        return false;
+    }
+    return true;
+}
