@@ -1,2 +1,4 @@
+Link to website: https://luxury-tapioca-da8121.netlify.app/
 
-- **Bonus**: See the age numbers animate to their final number when the form is submitted
+Frontend Mentor Solo Project. JavaScript validation practice.
+- **Still want to add**: numbers animate  when the form is submitted
